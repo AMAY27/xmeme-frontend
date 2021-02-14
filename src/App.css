@@ -1,0 +1,50 @@
+img{
+    width: 300px;
+}
+.display{
+    padding-left: 30px;
+    padding: 10px;
+    border: 1px solid lightblue;
+}
+button{
+    
+    background-color: gray;
+    border: none;
+    color: black;
+    padding: .475rem .75rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 30px;
+}
+form{
+    width: 30%;
+    position: fixed;
+    padding-top: 60px;
+}
+.MemePost{
+    padding-left : 600px;
+    padding-right: 580px;
+    padding-top: 300px;
+    height: 500px;
+    overflow: scroll;
+}
+.form-input{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+    
+}
+.form-input input{
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    min-height: 10vh;
+    background : teal;
+    color : white;
+    position: fixed;
+    width: 100%;
+  }
