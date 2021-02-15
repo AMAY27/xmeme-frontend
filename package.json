@@ -10,6 +10,7 @@
     "bootstrap": "^4.6.0",
     "git": "^0.1.5",
     "heroku": "^7.47.12",
+    "netlify": "^6.1.8",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
@@ -18,10 +19,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "cd src && npm run build",
-    "install-src": "cd src && npm install",
-    "heroku-postbuild": "npm run install-src && npm run build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "https://amay-xmeme.herokuapp.com/"
 }

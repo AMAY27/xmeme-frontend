@@ -2,9 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser')
 //const cors = require('cors')
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 //const db = require('./db')
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://127.0.0.1:27017/memed", {
+mongoose.connect("mongodb+srv://Amay:Bluemans@27@cluster0.pulgo.mongodb.net/memed?retryWrites=true&w=majority", {
   useNewUrlParser: true
 });
 
@@ -16,7 +17,7 @@ connection.once("open", function() {
 const memeRouter = require('./routes/router')
 
 const app = express()
-const apiPort = process.env.apiPort || 8080;
+const apiPort = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: true }))
 //app.use(cors())
@@ -28,8 +29,4 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 app.use('/', memeRouter);
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('memesss/build'));
-}
-
-app.listen(apiPort, () => console.log('Server running on port ',apiPort))
+app.listen(apiPort, () => console.log('Server running on port ',apiPort));
