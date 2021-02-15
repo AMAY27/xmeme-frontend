@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   getMeme = ()=>{
-    axios.get('/memes')
+    axios.get('https://amay-xmeme.herokuapp.com/memes')
     .then(({data})=>{
       //const data = response.data;
       const rev = new Array(100);
@@ -50,7 +50,7 @@ class App extends React.Component {
       caption:this.state.caption
     };
     axios({
-      url:'/meme',
+      url:'https://amay-xmeme.herokuapp.com/meme',
       method:'POST',
       data: payload
     }).then(() => {
